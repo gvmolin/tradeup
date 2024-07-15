@@ -28,7 +28,7 @@ Preferimos utilizar o Pinia em vez do Vuex 3, pois ele é a solução de estado 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/usuario/projeto-cep.git
+   git clone https://github.com/gvmolin/tradeup
    cd projeto-cep
     ```
 
