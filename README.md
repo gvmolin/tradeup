@@ -13,7 +13,7 @@ Este projeto é uma aplicação frontend que consome uma API externa para realiz
 
 ### Vue 3 com TypeScript
 
-Optamos por utilizar Vue 3 juntamente com TypeScript para aproveitar a tipagem estática que o TypeScript oferece, o que melhora a robustez do código e facilita a detecção de erros durante o desenvolvimento. Além disso, a abordagem do `script setup` na Composition API do Vue 3 se mostrou mais interessante para este projeto, pois permite um código mais limpo e conciso.
+Optamos por utilizar Vue 3 juntamente com TypeScript para aproveitar a tipagem estática que o TypeScript oferece, o que melhora a robustez do código e facilita a detecção de erros durante o desenvolvimento. Além disso, a abordagem do "script setup" na Composition API do Vue 3 se mostrou mais interessante para este projeto, pois permite um código mais limpo e conciso.
 
 ### Element Plus
 
@@ -30,11 +30,11 @@ Preferimos utilizar o Pinia em vez do Vuex 3, pois ele é a solução de estado 
    ```bash
    git clone https://github.com/gvmolin/tradeup
    cd projeto-cep
-    ```
+   ```
 
 2. Instale as dependências e execute a aplicação:
 
    ```bash
    yarn install
    yarn dev
-```
+   ```
