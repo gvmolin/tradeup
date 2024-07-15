@@ -1,7 +1,9 @@
 <template>
     <header>
         <div :class="`container ${menuStore.active ? '' : 'hidden'}`">
-
+            <div class="mobile-button-container" v-if="screenWidth < 1024">
+                <el-button @click="menuStore.swapActive()" type="danger"><font-awesome-icon :icon="['fas', 'times-circle']" /></el-button>
+            </div>
             <div>
                 <LogoComponent></LogoComponent>
                 <nav>
@@ -39,14 +41,7 @@ import { RouterLink } from 'vue-router'
 import { ref, watch } from 'vue';
 
 const menuStore = useMenuStore();
-
-watch(() => menuStore.active, () => {
-    if (!!menuStore.active) {
-
-    }
-
-})
-
+const screenWidth = ref<number>(window.innerWidth);
 
 </script>
 
@@ -121,5 +116,38 @@ header {
         transform: rotate(-180deg);
         transition: transform 1s;
     }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(99% - $defaultPaddingHor);
+        height: calc(99vh - $defaultPaddingVer);
+        z-index: 99999;
+        margin: 0;
+        overflow: hidden;
+        // padding: 0;
+
+    }
+
+    .hidden {
+        left: 0;
+        overflow: hidden;
+        display: none;
+    }
+
+    .swap-button {
+        display: none;
+
+    }
+
+    .mobile-button-container {
+        position: fixed;
+        top: $defaultPaddingVer;
+        right: $defaultPaddingVer;
+    }
+
 }
 </style>
